@@ -832,6 +832,12 @@ i.iconfont {
   font-size: 1em;
   line-height: 1;
 }
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 :root {
   --color-mode: "light";
   --body-bg-color: #eee;
