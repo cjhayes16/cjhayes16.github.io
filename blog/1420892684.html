@@ -16,12 +16,12 @@
   <meta name="author" content="JHAYES">
   <meta name="keywords" content="">
   
-    <meta name="description" content="闭包的定义闭包（Closure）是 JavaScript 中一个重要的概念，它涉及到函数和作用域。闭包是指函数可以访问其外部函数作用域中的变量，即使外部函数已经执行完毕。这允许在内部函数中访问外部函数的变量和参数，从而创建了一种封闭的作用域。 下面是一个简单的 JavaScript 闭包示例： 123456789101112function outerFunction() &amp;#123;  var">
+    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭包">
-<meta property="og:url" content="http://jhayes.cn/blog/4184040338.html">
+<meta property="og:title" content="Promise">
+<meta property="og:url" content="http://jhayes.cn/blog/1420892684.html">
 <meta property="og:site_name" content="JHAYES">
-<meta property="og:description" content="闭包的定义闭包（Closure）是 JavaScript 中一个重要的概念，它涉及到函数和作用域。闭包是指函数可以访问其外部函数作用域中的变量，即使外部函数已经执行完毕。这允许在内部函数中访问外部函数的变量和参数，从而创建了一种封闭的作用域。 下面是一个简单的 JavaScript 闭包示例： 123456789101112function outerFunction() &amp;#123;  var">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="1970-12-31T16:00:00.000Z">
 <meta property="article:modified_time" content="1970-12-31T16:00:00.000Z">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>闭包 - JHAYES</title>
+  <title>Promise - JHAYES</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="闭包"></span>
+            <span id="subtitle" data-typed-text="Promise"></span>
           
         </div>
 
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.5k 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          17 分钟
+          22 分钟
         
       </span>
     
@@ -309,72 +309,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">闭包</h1>
+            <h1 id="seo-header">Promise</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h1><p>闭包（Closure）是 JavaScript 中一个重要的概念，它涉及到函数和作用域。闭包是指函数可以访问其外部函数作用域中的变量，即使外部函数已经执行完毕。这允许在内部函数中访问外部函数的变量和参数，从而创建了一种封闭的作用域。</p>
-<p>下面是一个简单的 JavaScript 闭包示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">outerFunction</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">var</span> outerVariable = <span class="hljs-number">10</span>;<br><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">innerFunction</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(outerVariable); <span class="hljs-comment">// 内部函数访问外部函数的变量</span><br>  &#125;<br><br>  <span class="hljs-keyword">return</span> innerFunction;<br>&#125;<br><br><span class="hljs-keyword">var</span> closure = <span class="hljs-title function_">outerFunction</span>();<br><span class="hljs-title function_">closure</span>(); <span class="hljs-comment">// 输出 10</span><br></code></pre></td></tr></table></figure>
-
-<p>在上面的示例中，<code>outerFunction</code>包含了一个内部函数<code>innerFunction</code>，并返回了这个内部函数。当我们调用<code>outerFunction</code>并将其结果赋给<code>closure</code>时，实际上我们获得了一个闭包。当我们后续调用<code>closure()</code>时，它仍然可以访问<code>outerVariable</code>，即使<code>outerFunction</code>已经执行完毕。</p>
-<p>闭包在 JavaScript 中有许多用途，例如：</p>
-<ol>
-<li><p><strong>封装数据</strong>: 通过闭包，可以创建私有变量，只有内部函数可以访问，从而实现数据封装。</p>
-</li>
-<li><p><strong>模块化</strong>: 闭包可以用于创建模块，将代码封装在闭包中，防止全局作用域的污染。</p>
-</li>
-<li><p><strong>回调函数</strong>: 闭包常常用于回调函数，将函数作为参数传递给其他函数，保持对外部作用域的访问。</p>
-</li>
-<li><p><strong>保存状态</strong>: 闭包可以用于保存函数的状态，例如计数器或计时器。</p>
-</li>
-</ol>
-<p>需要注意的是，使用闭包时要小心内存泄漏问题，因为闭包会保持对外部作用域的引用，如果不小心导致引用的变量无法被垃圾回收，可能会导致内存泄漏。因此，在使用闭包时，需要谨慎管理变量的生命周期。</p>
-<h1 id="闭包的生命周期"><a href="#闭包的生命周期" class="headerlink" title="闭包的生命周期"></a>闭包的生命周期</h1><p>JavaScript 闭包的生命周期与其包含的函数和外部作用域之间的关系密切相关。以下是闭包的生命周期的主要阶段：</p>
-<p><strong>创建阶段</strong>：</p>
-<p>闭包在函数定义时创建。<br>当内部函数引用了外部函数的变量或参数时，就会形成一个闭包。<br>闭包包含了对外部函数作用域的引用。</p>
-<p><strong>执行阶段</strong>：</p>
-<p>闭包在内部函数被调用时开始执行。<br>闭包可以访问其创建时包含的外部函数作用域中的变量和参数。<br>闭包可以多次执行，每次执行都可以访问相同的外部函数作用域。<br><strong>结束阶段</strong>：</p>
-<p>闭包的生命周期取决于其是否仍然被引用。<br>如果没有任何引用指向闭包，它可以被垃圾回收，从而结束其生命周期。<br>如果闭包仍然被引用，它将保持活动状态，不会被垃圾回收，直到所有引用都被解除。<br>闭包的生命周期通常取决于其被创建的上下文和其是否在外部函数之外被引用。如果闭包在外部函数之外被传递给其他函数或存储在全局作用域中，它可能会持续存在，直到整个应用程序结束。如果闭包仅在外部函数内部使用，那么它的生命周期可能会更短，当外部函数执行完成后，闭包可能会被垃圾回收。</p>
-<p>要注意的是，如果在闭包中引用了大量的外部变量或大型数据结构，可能会导致内存泄漏问题。因此，在使用闭包时，要小心管理变量的生命周期，确保不会意外地保持对不再需要的资源的引用。</p>
-<h1 id="闭包的缺点及其解决办法"><a href="#闭包的缺点及其解决办法" class="headerlink" title="闭包的缺点及其解决办法"></a>闭包的缺点及其解决办法</h1><p>闭包是在 JavaScript 中非常有用的概念，但也有一些潜在的缺点，主要包括内存泄漏和性能问题。以下是闭包的一些缺点以及相应的解决办法：</p>
-<p><strong>缺点</strong>:</p>
-<ol>
-<li><strong>内存泄漏</strong>：<ul>
-<li>当闭包引用外部作用域中的变量时，这些变量不会被垃圾回收，即使它们不再需要也会保持在内存中。</li>
-</ul>
-</li>
-<li><strong>性能问题</strong>：<ul>
-<li>使用过多的闭包可能会导致性能问题，因为每个闭包都会捕获外部作用域的变量，可能导致额外的内存和计算开销。</li>
-</ul>
-</li>
-</ol>
-<p><strong>解决办法</strong>:</p>
-<ol>
-<li><strong>手动解除引用</strong>：<ul>
-<li>为了避免内存泄漏，可以在不再需要闭包时手动解除对它的引用。这可以通过将变量设置为<code>null</code>来实现。</li>
-<li>例如，当不再需要某个事件处理函数时，可以使用<code>removeEventListener</code>来解除对该函数的引用，从而释放闭包。</li>
-</ul>
-</li>
-<li><strong>避免滥用闭包</strong>：<ul>
-<li>不是每个函数都需要成为闭包。只有在确实需要访问外部作用域中的变量时才使用闭包，避免滥用它们。</li>
-</ul>
-</li>
-<li><strong>使用模块模式</strong>：<ul>
-<li>模块模式是一种将私有状态和行为封装在闭包中的方法。这样可以避免全局命名空间污染，并且不容易导致内存泄漏。</li>
-</ul>
-</li>
-<li><strong>优化性能</strong>：<ul>
-<li>如果闭包的性能成为问题，可以考虑其他优化方法，例如将函数重构为不需要闭包的形式，或者使用缓存来减少计算的次数。</li>
-</ul>
-</li>
-<li><strong>使用箭头函数</strong>：<ul>
-<li>箭头函数在创建闭包时具有更短的语法，且通常不会捕获外部作用域的<code>this</code>值，这可以减少一些潜在的问题。</li>
-</ul>
-</li>
-</ol>
-<p>总之，闭包是 JavaScript 中强大且灵活的概念，但需要谨慎使用，以避免潜在的内存泄漏和性能问题。通过手动解除引用、避免滥用闭包、使用模块模式等方法，可以更好地管理闭包的生命周期。</p>
+                <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">PENDING</span> = <span class="hljs-string">&quot;pending&quot;</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">FULFILLED</span> = <span class="hljs-string">&quot;fulfilled&quot;</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">REJECTED</span> = <span class="hljs-string">&quot;rejected&quot;</span>;<br><br><span class="hljs-comment">//微队列</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">runMicrotasks</span>(<span class="hljs-params">callback</span>) &#123;<br>  <span class="hljs-comment">//判断node环境</span><br>  <span class="hljs-keyword">if</span> (process &amp;&amp; process.<span class="hljs-property">nextTick</span>) &#123;<br>    process.<span class="hljs-title function_">nextTick</span>(callback);<br>  &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title class_">MutationObserver</span>) &#123;<br>    <span class="hljs-keyword">const</span> p = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;p&quot;</span>);<br>    <span class="hljs-keyword">const</span> observer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MutationObserver</span>(callback);<br>    observer.<span class="hljs-title function_">observe</span>(p, &#123; <span class="hljs-attr">childList</span>: <span class="hljs-literal">true</span> &#125;);<br>    p.<span class="hljs-property">innerHTML</span> = <span class="hljs-number">1</span>;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-built_in">setTimeout</span>(callback, <span class="hljs-number">0</span>);<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">isPromise</span>(<span class="hljs-params">obj</span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    !!obj &amp;&amp; <span class="hljs-comment">//有实际含义的变量才执行方法，变量null，undefined和&#x27;&#x27;空串都为false</span><br>    (<span class="hljs-keyword">typeof</span> obj === <span class="hljs-string">&quot;object&quot;</span> || <span class="hljs-keyword">typeof</span> obj === <span class="hljs-string">&quot;function&quot;</span>) &amp;&amp; <span class="hljs-comment">// 初始promise 或 promise.then返回的</span><br>    <span class="hljs-keyword">typeof</span> obj.<span class="hljs-property">then</span> === <span class="hljs-string">&quot;function&quot;</span><br>  );<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPromise</span> &#123;<br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 创建一个Promise</span><br><span class="hljs-comment">   *<span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">function</span>&#125;executor 任务执行器，立即执行</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">executor</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> = <span class="hljs-variable constant_">PENDING</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_value</span> = <span class="hljs-literal">undefined</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_handlers</span> = [];<br>    <span class="hljs-keyword">try</span> &#123;<br>      <span class="hljs-title function_">executor</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_resolve</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>), <span class="hljs-variable language_">this</span>.<span class="hljs-property">_reject</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>));<br>    &#125; <span class="hljs-keyword">catch</span> (error) &#123;<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_reject</span>(error);<br>    &#125;<br>  &#125;<br>  <span class="hljs-title function_">_changeState</span>(<span class="hljs-params">newState, value</span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> !== <span class="hljs-variable constant_">PENDING</span>) &#123;<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> = newState;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_value</span> = value;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_runHandlers</span>();<br>  &#125;<br>  <span class="hljs-title function_">_pushHandler</span>(<span class="hljs-params">executor, state, resolve, reject</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_handlers</span>.<span class="hljs-title function_">push</span>(&#123;<br>      executor,<br>      state,<br>      resolve,<br>      reject,<br>    &#125;);<br>  &#125;<br>  <span class="hljs-comment">//处理每一个handler</span><br>  <span class="hljs-title function_">_runOneHandler</span>(<span class="hljs-params">handler</span>) &#123;<br>    <span class="hljs-title function_">runMicrotasks</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> !== state) &#123;<br>        <span class="hljs-keyword">return</span>;<br>      &#125;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> executor !== <span class="hljs-string">&quot;function&quot;</span>) &#123;<br>        <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> === <span class="hljs-variable constant_">FULFILLED</span> ? <span class="hljs-title function_">resolve</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_value</span>) : <span class="hljs-title function_">reject</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_value</span>);<br>        <span class="hljs-keyword">return</span>;<br>      &#125;<br>      <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isPromise</span>(result)) &#123;<br>          result.<span class="hljs-title function_">then</span>(resolve, reject);<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-title function_">resolve</span>(result);<br>        &#125;<br>      &#125; <span class="hljs-keyword">catch</span> (error) &#123;<br>        <span class="hljs-title function_">reject</span>(error);<br>      &#125;<br>    &#125;);<br>  &#125;<br>  <span class="hljs-comment">//根据实际情况，执行队列</span><br>  <span class="hljs-title function_">_runHandlers</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span> === <span class="hljs-variable constant_">PENDING</span>) &#123;<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">_handlers</span>[<span class="hljs-number">0</span>]) &#123;<br>      <span class="hljs-keyword">const</span> handler = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_handlers</span>[<span class="hljs-number">0</span>];<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_runOneHandler</span>(handler);<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_handlers</span>.<span class="hljs-title function_">shift</span>();<br>    &#125;<br>  &#125;<br>  <span class="hljs-title function_">then</span>(<span class="hljs-params">onFulfilled, onRejected</span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">myPromise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_pushHandler</span>(onFulfilled, <span class="hljs-variable constant_">FULFILLED</span>, resolve, reject);<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_pushHandler</span>(onRejected, <span class="hljs-variable constant_">REJECT</span>, resolve, reject);<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_runHandlers</span>();<br>    &#125;);<br>  &#125;<br><br>  <span class="hljs-title function_">_resolve</span>(<span class="hljs-params">data</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_changeState</span>(<span class="hljs-variable constant_">FULFILLED</span>, data);<br>  &#125;<br>  <span class="hljs-title function_">_reject</span>(<span class="hljs-params">reason</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_changeState</span>(<span class="hljs-variable constant_">REJECTED</span>, reason);<br>  &#125;<br>&#125;<br><span class="hljs-keyword">const</span> pro = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>  <span class="hljs-title function_">resolve</span>(<span class="hljs-number">1</span>);<br>&#125;);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(pro);<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -420,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>闭包</div>
-      <div>http://jhayes.cn/blog/4184040338.html</div>
+      <div>Promise</div>
+      <div>http://jhayes.cn/blog/1420892684.html</div>
     </div>
     <div class="license-meta">
       
@@ -477,9 +417,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/4181456602.html" title="跨平台应用">
+                      <a href="/blog/96864191.html" title="scrapy库使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">跨平台应用</span>
+                        <span class="hidden-mobile">scrapy库使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -487,8 +427,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/911124684.html" title="Javascript设计模式">
-                        <span class="hidden-mobile">Javascript设计模式</span>
+                      <a href="/blog/200855344.html" title="原型链">
+                        <span class="hidden-mobile">原型链</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
