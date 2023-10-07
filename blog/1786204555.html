@@ -16,24 +16,24 @@
   <meta name="author" content="JHAYES">
   <meta name="keywords" content="">
   
-    <meta name="description" content="RBAC（Role-Based Access Control）权限模型是一种用于管理和控制用户对系统资源的访问权限的安全模型。在RBAC模型中，访问控制是基于用户的角色和权限的组合进行管理的，而不是直接与每个用户相关联的单个权限。 RBAC模型包含以下几个主要组成部分：  角色（Roles）：角色代表了用户的一组职能或权限。例如，可以定义”管理员”、”编辑员”、”读者”等角色。  权限（Permi">
+    <meta name="description" content="以下是一个简单的Jest测试示例，演示如何使用Jest来测试一个基本的JavaScript函数。假设我们有一个名为add的函数，用于将两个数字相加。 首先，确保你已经安装了Jest，如果没有，可以使用npm或yarn进行安装： 1npm install --save-dev jest  然后，创建一个名为math.js的JavaScript文件，其中包含我们要测试的函数： 123456&#x2F;&#x2F; mat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RBAC权限模型">
+<meta property="og:title" content="Jest测试">
 <meta property="og:url" content="http://jhayes.cn/blog/1786204555.html">
 <meta property="og:site_name" content="JHAYES">
-<meta property="og:description" content="RBAC（Role-Based Access Control）权限模型是一种用于管理和控制用户对系统资源的访问权限的安全模型。在RBAC模型中，访问控制是基于用户的角色和权限的组合进行管理的，而不是直接与每个用户相关联的单个权限。 RBAC模型包含以下几个主要组成部分：  角色（Roles）：角色代表了用户的一组职能或权限。例如，可以定义”管理员”、”编辑员”、”读者”等角色。  权限（Permi">
+<meta property="og:description" content="以下是一个简单的Jest测试示例，演示如何使用Jest来测试一个基本的JavaScript函数。假设我们有一个名为add的函数，用于将两个数字相加。 首先，确保你已经安装了Jest，如果没有，可以使用npm或yarn进行安装： 1npm install --save-dev jest  然后，创建一个名为math.js的JavaScript文件，其中包含我们要测试的函数： 123456&#x2F;&#x2F; mat">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="1970-12-31T16:00:00.000Z">
 <meta property="article:modified_time" content="1970-12-31T16:00:00.000Z">
 <meta property="article:author" content="JHAYES">
-<meta property="article:tag" content="权限">
+<meta property="article:tag" content="测试">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>RBAC权限模型 - JHAYES</title>
+  <title>Jest测试 - JHAYES</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="RBAC权限模型"></span>
+            <span id="subtitle" data-typed-text="Jest测试"></span>
           
         </div>
 
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          895 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          11 分钟
+          8 分钟
         
       </span>
     
@@ -309,49 +309,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">RBAC权限模型</h1>
+            <h1 id="seo-header">Jest测试</h1>
             
             
               <div class="markdown-body">
                 
-                <p>RBAC（Role-Based Access Control）权限模型是一种用于管理和控制用户对系统资源的访问权限的安全模型。在RBAC模型中，访问控制是基于用户的角色和权限的组合进行管理的，而不是直接与每个用户相关联的单个权限。</p>
-<p>RBAC模型包含以下几个主要组成部分：</p>
-<ol>
-<li><p><strong>角色（Roles）</strong>：角色代表了用户的一组职能或权限。例如，可以定义”管理员”、”编辑员”、”读者”等角色。</p>
-</li>
-<li><p><strong>权限（Permissions）</strong>：权限是指在系统中可以执行的操作或访问的资源。例如，可以定义”创建用户”、”编辑文章”、”删除评论”等权限。</p>
-</li>
-<li><p><strong>用户（Users）</strong>：用户是系统的实际操作者。用户可以被分配到一个或多个角色，从而继承这些角色所拥有的权限。</p>
-</li>
-<li><p><strong>角色赋予（Role Assignment）</strong>：角色赋予是指将角色分配给用户的过程。通过角色赋予，用户获得了被分配角色所拥有的权限。</p>
-</li>
-<li><p><strong>权限限制（Permission Constraints）</strong>：权限限制定义了对某些特定资源或操作的额外限制条件。例如，在某个角色的权限上添加额外的时间限制、地理位置限制等。</p>
-</li>
-</ol>
-<p>RBAC模型的优点包括：</p>
-<ol>
-<li><p><strong>简化权限管理</strong>：通过将权限分配给角色，用户与角色的关系可以更灵活地管理。当用户角色发生变化时，只需改变角色与用户的关联关系，而不需要逐个调整用户权限。</p>
-</li>
-<li><p><strong>提高安全性</strong>：RBAC模型遵循最小权限原则，用户只获得其所属角色的权限，限制了他们的资源访问能力，从而增强了系统的安全性。</p>
-</li>
-<li><p><strong>易于维护和扩展</strong>：通过角色的组织和权限的分配，RBAC模型使权限管理更加可维护和可扩展。新增角色和权限可以更轻松地添加到系统中，而不会对现有的权限结构产生过多的影响。</p>
-</li>
-</ol>
-<p>RBAC 0 模型是一种基于角色的访问控制（RBAC）模型，它是RBAC模型的一种简化版本。在RBAC 0 模型中，只有角色和权限的概念，没有用户的概念。</p>
-<p>在 RBAC 0 模型中，角色是系统中的抽象概念，代表着具有一组相同权限集合的用户。而权限是指可以执行的操作或者访问的资源。</p>
-<p>RBAC 0 模型的核心思想是将权限分配给角色，然后用户被赋予一个或多个角色，从而继承了这些角色的权限。这种设计可以简化权限管理，可以通过更改用户和角色之间的关联关系，来调整用户的权限。</p>
-<p>简化的 RBAC 0 模型具有以下特点：</p>
-<ol>
-<li><p><strong>角色集合（Sets of Roles）</strong>：角色集合代表系统中可用的角色，每个角色有一个或多个权限。</p>
-</li>
-<li><p><strong>权限集合（Sets of Permissions）</strong>：权限集合包含系统中定义的不同权限，它们可以与角色进行关联。</p>
-</li>
-<li><p><strong>角色和权限的关联（Role-to-Permission Mapping）</strong>：角色和权限之间有一种对应关系，即角色被分配与权限的集合。</p>
-</li>
-<li><p><strong>用户角色的关联（User-to-Role Mapping）</strong>：系统中的用户被赋予一个或多个角色，从而继承了这些角色的权限。</p>
-</li>
-</ol>
-<p>总体而言，RBAC 0 模型是一种简化的角色-权限访问控制模型，它忽略了用户角色的多对多关系，只关注角色和权限的关联。这种模型适用于简单的权限管理场景，但在涉及到复杂的用户-角色-权限关系时可能不够灵活。</p>
+                <p>以下是一个简单的Jest测试示例，演示如何使用Jest来测试一个基本的JavaScript函数。假设我们有一个名为<code>add</code>的函数，用于将两个数字相加。</p>
+<p>首先，确保你已经安装了Jest，如果没有，可以使用npm或yarn进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save-dev jest<br></code></pre></td></tr></table></figure>
+
+<p>然后，创建一个名为<code>math.js</code>的JavaScript文件，其中包含我们要测试的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// math.js</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) &#123;<br>  <span class="hljs-keyword">return</span> a + b;<br>&#125;<br><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = add;<br></code></pre></td></tr></table></figure>
+
+<p>接下来，创建一个名为<code>math.test.js</code>的测试文件，用于编写测试用例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// math.test.js</span><br><span class="hljs-keyword">const</span> add = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./math&#x27;</span>);<br><br><span class="hljs-title function_">test</span>(<span class="hljs-string">&#x27;addition of 1 + 2 should equal 3&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">add</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">3</span>);<br>&#125;);<br><br><span class="hljs-title function_">test</span>(<span class="hljs-string">&#x27;addition of -1 + 1 should equal 0&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">add</span>(-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);<br>&#125;);<br><br><span class="hljs-title function_">test</span>(<span class="hljs-string">&#x27;addition of 0 + 0 should equal 0&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">add</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>在上述测试文件中，我们导入了要测试的<code>add</code>函数，并使用<code>test</code>函数编写了三个测试用例。每个测试用例使用<code>expect</code>和匹配器函数（例如<code>toBe</code>）来断言函数的行为是否符合预期。</p>
+<p>最后，你可以运行Jest来执行测试。在项目根目录下运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest<br></code></pre></td></tr></table></figure>
+
+<p>Jest将自动运行<code>math.test.js</code>中的测试用例，并输出测试结果。如果所有测试通过，你将看到一条成功的消息。</p>
+<p>这只是一个简单的示例，Jest支持更复杂的测试场景，如异步测试、模拟函数、测试React组件等。你可以根据项目需求扩展测试套件并使用Jest的其他功能来编写全面的测试。</p>
 
                 
               </div>
@@ -370,7 +348,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="category-chain-item">程序设计</a>
+  <a href="/categories/%E6%B5%8B%E8%AF%95/" class="category-chain-item">测试</a>
   
   
 
@@ -385,7 +363,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%9D%83%E9%99%90/" class="print-no-link">#权限</a>
+        <a href="/tags/%E6%B5%8B%E8%AF%95/" class="print-no-link">#测试</a>
       
     </div>
   
@@ -397,7 +375,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>RBAC权限模型</div>
+      <div>Jest测试</div>
       <div>http://jhayes.cn/blog/1786204555.html</div>
     </div>
     <div class="license-meta">
@@ -454,9 +432,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/1608380678.html" title="Git 常用命令">
+                      <a href="/blog/104473986.html" title="Urllib库使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git 常用命令</span>
+                        <span class="hidden-mobile">Urllib库使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -464,8 +442,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2175988928.html" title="python基础">
-                        <span class="hidden-mobile">python基础</span>
+                      <a href="/blog/2198107746.html" title="Jest端对端测试">
+                        <span class="hidden-mobile">Jest端对端测试</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -826,5 +804,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"left","hOffset":0,"vOffset":-20,"width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</body>
 </html>
